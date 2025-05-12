@@ -30,35 +30,19 @@
       <div class="right-image">
         <img src="./images/division.jpg" alt="Division" />
       </div>
-      <div class="page-content">Please enter in a number and what it will be divided by.</div>
-      <br />
-      <!-- Simple Textfield for integers-->
-      <form action="answer.php" method="GET">
-        <div class="mdl-textfield mdl-js-textfield">
-          <!-- input pattern attribute -->
-          <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" name="user-dividend" />
-          <!-- mdl-textfield__label -->
-          <label class="mdl-textfield__label" for="demo-input">Dividend...</label>
-          <!-- class "mdl-textfield__error" -->
-          <span class="mdl-textfield__error">Input is not a number</span>
-        </div>
-        <br />
-        <!-- Simple Textfield for integers-->
-        <div class="mdl-textfield mdl-js-textfield">
-          <!-- input pattern attribute -->
-          <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" name="user-divisor" />
-          <!-- mdl-textfield__label -->
-          <label class="mdl-textfield__label" for="demo-input">Divisor...</label>
-          <!-- class "mdl-textfield__error" -->
-          <span class="mdl-textfield__error">Input is not a number</span>
-        </div>
-        <br />
-        <!-- Accent-colored raised button with ripple -->
-        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
-          type="submit">
-          Calculate
-        </button>
-      </form>
+      <?php
+      $dividend = $_GET["user-dividend"];
+      $divisor = $_GET["user-divisor"];
+      $remainder = $dividend;
+      $quotient = 0;
+
+      while ($remainder >= $divisor) {
+        $remainder -= $divisor;
+        $quotient++;
+      }
+
+      echo $dividend . " ÷ " . $divisor . " = " . $quotient . " and the remainder is: " . $remainder . ".";
+      ?>
     </main>
   </div>
 </body>
