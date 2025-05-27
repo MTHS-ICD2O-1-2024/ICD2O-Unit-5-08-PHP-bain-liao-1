@@ -1,5 +1,5 @@
 <html lang="en-ca">
-<!-- ICS2O-Unit5-08-JS -->
+<!-- ICS2O-Unit5-08-PHP -->
 
 <head>
   <meta charset="utf-8" />
