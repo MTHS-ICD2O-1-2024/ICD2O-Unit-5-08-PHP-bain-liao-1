@@ -39,6 +39,9 @@
       while ($remainder >= $divisor) {
         $remainder -= $divisor;
         $quotient++;
+        if ($remainder < $userDivisor) {
+          break;
+        }
       }
 
       echo $dividend . " ÷ " . $divisor . " = " . $quotient . " and the remainder is: " . $remainder . ".";
