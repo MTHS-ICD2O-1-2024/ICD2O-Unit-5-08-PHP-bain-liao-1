@@ -36,10 +36,10 @@
       $remainder = $dividend;
       $quotient = 0;
 
-      while ($remainder >= $divisor) {
+      while (true) {
         $remainder -= $divisor;
         $quotient++;
-        if ($remainder < $userDivisor) {
+        if ($remainder < $divisor) {
           break;
         }
       }
